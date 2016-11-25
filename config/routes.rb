@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   resources :products
 
-  # namespace :api do
-  #   namespace :v1 do
-  #     resources :products, only: :index
-  #   end
-  # end
+  namespace :api do
+    namespace :v1 do
+      resources :products, only: :index
+    end
+  end
 
-  resources :products, path: 'api/v1/products'
+  # resources :products, path: 'api/v1/products'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
